@@ -27,5 +27,9 @@ Files used:
 - Examine order frequency (`days_since_prior_order`).  
 - Compare ordering times across days (e.g., Wednesday vs. Saturday).  
 - Identify most frequently ordered and reordered products.  
-- Explore shopping cart patterns (first items added, order size).  
-
+- Explore shopping cart patterns (first items added, order size).
+  
+## Requirements
+Install dependencies with:
+```bash
+pip install -r requirements.txt
