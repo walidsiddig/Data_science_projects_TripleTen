@@ -1,6 +1,7 @@
 ### requirements.txt
 pandas
 numpy
+tqdm
+math
 matplotlib
 seaborn
-scikit-learn

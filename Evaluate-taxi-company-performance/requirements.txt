@@ -1,6 +1,6 @@
 ### requirements.txt
 pandas
-numpy
+re
 matplotlib
 seaborn
-scikit-learn
+scipy

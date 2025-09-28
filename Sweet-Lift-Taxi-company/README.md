@@ -1,22 +1,23 @@
-# Evaluate Taxi Company Performance
+# Sweet Lift Taxi – Demand Forecasting
 
 ## Overview
-Analyzed taxi company trip and revenue data to evaluate performance, market share, and efficiency. The goal was to identify top-performing companies for strategic recommendations.
+Forecasted hourly taxi orders using time series models. The goal was to improve operational efficiency and meet demand proactively.
 
 ## Data
-- Trip counts and revenue per company.  
-- Aggregated over time.  
+- Historical hourly taxi order counts.  
+- Target: Number of future orders.  
 
 ## Approach
-1. **Data Cleaning** – duplicates, formatting.  
-2. **EDA** – visual comparisons of providers.  
-3. **Analysis** – evaluated efficiency and market share.  
+1. **Resampling** – aggregated orders by hour.  
+2. **Feature Engineering** – lags, rolling averages.  
+3. **Modeling** – regression and ARIMA-style forecasting.  
+4. **Evaluation** – RMSE (target ≤ 48).  
 
 ## Results
-- Identified top and underperforming companies.  
-- Recommendations for strategic partnerships.  
+- Achieved RMSE within business requirement.  
+- Provided actionable demand forecasts.  
 
 ## Usage
 ```bash
 pip install -r requirements.txt
-jupyter notebook "6 - Evaluate taxi company performance.ipynb"
+jupyter notebook "13 - Sweet Lift Taxi company.ipynb"
