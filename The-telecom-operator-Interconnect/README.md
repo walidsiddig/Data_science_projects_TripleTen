@@ -1,23 +1,52 @@
-# Interconnect – Telecom Tariff Recommendation
+# Telecom Operator Customer Churn Prediction
 
-## Overview
-This project develops a machine learning model to recommend the most suitable telecom tariff plan for customers. By aligning tariffs with customer behavior, the company can reduce churn and increase satisfaction.
+## Project Overview
+This project focuses on predicting customer churn for a telecom operator using multiple datasets, including contract, demographic, and service usage information. The goal is to identify which customers are likely to leave and provide actionable insights to reduce churn and improve retention strategies.
 
-## Data
-- Customer activity data: calls, SMS, and internet usage.  
-- Target variable: Chosen tariff plan.  
+## Objectives
+- Analyze customer behavior across contract, internet, phone, and demographic data.  
+- Identify factors that drive customer churn.  
+- Build and evaluate machine learning models to predict churn.  
+- Provide business recommendations to support customer retention.  
 
-## Approach
-1. **Data Preparation** – cleaned usage logs and formatted features.  
-2. **Exploratory Analysis** – compared usage across tariff groups.  
-3. **Modeling** – trained Logistic Regression, Decision Tree, Random Forest, and LightGBM models.  
-4. **Evaluation** – assessed models using accuracy and F1 score.  
+## Tools & Technologies
+- Python  
+- pandas, numpy – data manipulation & preprocessing  
+- matplotlib, seaborn – data visualization  
+- scikit-learn – preprocessing, baseline models, evaluation  
+- LightGBM – gradient boosting model  
+
+## Key Steps
+1. Data Preparation  
+   - Merged contract, personal, internet, and phone datasets.  
+   - Handled missing values, corrected data types, and engineered features (e.g., tenure).  
+
+2. Exploratory Data Analysis (EDA)  
+   - Examined churn by contract type, payment method, internet service, and tenure.  
+   - Identified high-risk churn groups.  
+
+3. Feature Engineering  
+   - Encoded categorical features (one-hot encoding).  
+   - Scaled numerical features.  
+   - Addressed class imbalance using class weights.  
+
+4. Modeling & Evaluation  
+   - Trained multiple models: Logistic Regression, Decision Tree, Random Forest, Gradient Boosting, LightGBM.  
+   - Evaluated using ROC-AUC as the main metric.  
 
 ## Results
-- Achieved strong classification accuracy.  
-- LightGBM performed best, making it the final model of choice.  
+- Best model: LightGBM  
+- Validation ROC-AUC: 0.996  
+- Test ROC-AUC: 0.998  
+- Provided insights into contract type, tenure, and payment methods as key churn drivers.  
 
-## Usage
+## Business Impact
+The model enables the telecom operator to:  
+- Accurately identify customers at risk of leaving.  
+- Design targeted retention campaigns.  
+- Optimize marketing spend and improve customer loyalty.  
+
+ ## Usage
 ```bash
 pip install -r requirements.txt
 jupyter notebook "17-The telecom operator Interconnect.ipynb"
